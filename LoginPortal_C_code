@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+void main() {
+    int pass;
+    int set_pass;
+    int attempt_cntr;
+    
+    printf("Password Firewall ver-1.0beta\n");
+    printf("Please Set a Password (Numbers Only): ");
+    scanf("%d", &set_pass);
+
+    for (attempt_cntr = 1; attempt_cntr <= 5; attempt_cntr++) {
+        printf("\nAttempt %d of 5\n", attempt_cntr);
+        printf("Enter Password to Get Access: ");
+        scanf("%d", &pass);
+        
+        if (pass == set_pass) {
+            printf("Access Granted!\n");
+            printf("Important Information:\n");
+            printf("Name - Vipul\n");
+            printf("Name - Tanishka\n");
+            printf("Name - Vikky\n");
+            printf("Name - Shrushti\n");
+            printf("Name - Janhavi\n");
+            printf("Thank You :) \n");
+            break;
+        } else {
+            printf("Invalid Password.\n");
+            if (attempt_cntr == 5) {
+                printf("Access Denied! Maximum attempts reached.\n");
+                printf("Thank You :) \n");
+                
+            }
+            
+        }
+    }
+}
